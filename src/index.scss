@@ -1,4 +1,4 @@
-:root {
+ :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -12,8 +12,29 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  min-height: 100vh;
+  --color-agro-primary : #e87722;
+  ;
+  --color-agro-secondary:#003087;
 }
+$theme-colors: (
+  primary: #e87722,
+  secondary:#003087
+) ;
 
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+.text-agro-primary{
+  color: var(--color-agro-primary)
+}
+.text-agro-secondary{
+  color: var(--color-agro-secondary);
+}
+body{
+  min-height: 100vh;
+
+}
+/*
 a {
   font-weight: 500;
   color: #646cff;
@@ -66,4 +87,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
