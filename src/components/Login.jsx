@@ -52,7 +52,7 @@ const Login = () => {
                     ¿No tienes una cuenta?
                   </a>
                   <button type="button" className="btn btn-secondary">
-                    Crear cuenta nueva
+                    Crear cuenta
                   </button>
                 </div>
               </form>
@@ -60,7 +60,7 @@ const Login = () => {
           </div>
         </section>
         <footer>
-          <p className="m-0 p-4 h4 bg-agro-primary text-center  fst-italic text-white">
+          <p className="mb-0 mt-2 p-3  h6 bg-agro-primary text-center  fst-italic text-white">
             Alimentamos lo bueno de la vida
           </p>
         </footer>
