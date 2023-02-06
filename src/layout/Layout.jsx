@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const LayoutAdmin = () => {
   return (
@@ -10,6 +11,7 @@ const LayoutAdmin = () => {
         <div className="row">
           <Navbar></Navbar>
           <Outlet />
+          <Footer />
         </div>
       </div>
       <div />
