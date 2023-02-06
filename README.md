@@ -1,6 +1,6 @@
 ## CHALLENGE BSale - Front End (ECOMMERCE)
 
-<center><img src="./src/assets/img/logo-agrosuper-azul.png" width="40%" /></center>
+<center><img src="./src/assets/img/logo-agrosuper-azul.jpg" width="40%" /></center>
 
 
 ## Consideraciones
