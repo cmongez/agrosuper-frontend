@@ -1,11 +1,14 @@
 //Estilos
 import '../scss/login.scss';
 import logo_png from '../assets/img/logo-agrosuper-transparente.png';
-
+import Footer from '../layout/Footer';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const { user, pass } = useSelector((state) => state.auth);
 
   const sendToGeneral = () => {
     navigate('/general');
@@ -59,11 +62,7 @@ const Login = () => {
             </div>
           </div>
         </section>
-        <footer>
-          <p className="mb-0 mt-2 p-3  h6 bg-agro-primary text-center  fst-italic text-white">
-            Alimentamos lo bueno de la vida
-          </p>
-        </footer>
+        <Footer />
       </div>
     </>
   );

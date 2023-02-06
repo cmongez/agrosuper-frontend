@@ -1,0 +1,19 @@
+POST http://f11.cl:8090/getCarnesRealProyeccion
+content-type: application/json
+
+{
+  "auth": {
+    "username": "devsafio",
+    "token": "tokentokentokenABC"
+  },
+  "query": {
+    "initial_date": {
+      "month": 1,
+      "year": 2020
+    },
+    "end_date": {
+      "month": 1,
+      "year": 2024
+    }
+  }
+}

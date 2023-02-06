@@ -9,7 +9,7 @@ const LayoutAdmin = () => {
     <div className="layout">
       <Header></Header>
       <div className="container-fluid">
-        <div class="row">
+        <div className="row">
           <Navbar></Navbar>
           <Outlet />
         </div>
