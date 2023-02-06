@@ -42,17 +42,18 @@ const Variaciones = () => {
               <tbody>
                 {variaciones.length > 0 ? (
                   variaciones.map((item) => (
+                    //  Se puede buscar una manera de iterar y normalizar todos los elementos para evitar escribir tantas veces la misma funcion
                     <tr scope="row" key={item.nro}>
-                      <th>{item.linea}</th>
-                      <td>{Math.trunc(item.ropSemAnt)}</td>
-                      <td>{Math.trunc(item.ropSemActual)}</td>
-                      <td>{Math.trunc(item.rop)}</td>
-                      <td>{Math.trunc(item.ventas)}</td>
-                      <td>{Math.trunc(item.costoVentas)}</td>
-                      <td>{Math.trunc(item.GAV)}</td>
-                      <td>{Math.trunc(item.toneladasTotal)}</td>
-                      <td>{Math.trunc(item.volNacional)}</td>
-                      <td>{Math.trunc(item.volExport)}</td>
+                      <th>{parseFloat(item.linea).toFixed(1)}</th>
+                      <td>{parseFloat(item.ropSemAnt).toFixed(1)}</td>
+                      <td>{parseFloat(item.ropSemActual).toFixed(1)}</td>
+                      <td>{parseFloat(item.rop).toFixed(1)}</td>
+                      <td>{parseFloat(item.ventas).toFixed(1)}</td>
+                      <td>{parseFloat(item.costoVentas).toFixed(1)}</td>
+                      <td>{parseFloat(item.GAV).toFixed(1)}</td>
+                      <td>{parseFloat(item.toneladasTotal).toFixed(1)}</td>
+                      <td>{parseFloat(item.volNacional).toFixed(1)}</td>
+                      <td>{parseFloat(item.volExport).toFixed(1)}</td>
                     </tr>
                   ))
                 ) : (
