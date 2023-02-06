@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className="mt-2">
       <p className="mb-0 mt-2 p-3  h6 bg-agro-primary text-center  fst-italic text-white">
         Alimentamos lo bueno de la vida
       </p>
