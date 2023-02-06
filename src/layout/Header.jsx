@@ -1,10 +1,20 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo_png from '../assets/img/logo-agrosuper-transparente.png';
 import perfil from '../assets/img/perfil.png';
 import '../scss/header.scss';
+import { setLogout } from '../features/auth/authSlice';
 
 const Header = () => {
   const { pathname } = useLocation();
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    dispatch(setLogout());
+    navigate('/login');
+  };
 
   let title = pathname.substring(1);
   title = title.charAt(0).toUpperCase() + title.slice(1);
@@ -18,8 +28,18 @@ const Header = () => {
       <h1 className="w-50 text-center text-agro-secondary fw-semibold">
         General {title === 'General' ? 'Carnes' : title}
       </h1>
-      <div className="w-25 text-end pe-md-3 pe-1">
-        <img className="img-fluid " src={perfil} alt="icono de perfil" />
+      <div className="w-25 pe-md-3 pe-1 text-end">
+        <div className="d-flex flex-column align-items-end">
+          <img
+            onClick={() => navigate('/perfil')}
+            className="img-fluid me-1 logout"
+            src={perfil}
+            alt="icono de perfil"
+          />
+          <span className="fw-semibold logout" onClick={handleLogout}>
+            Logout
+          </span>
+        </div>
       </div>
     </header>
   );

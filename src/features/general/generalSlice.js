@@ -1,7 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-console.log(process.env);
-
 const generalSlice = createSlice({
   name: 'general',
   initialState: {
