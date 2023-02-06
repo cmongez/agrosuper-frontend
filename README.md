@@ -1,4 +1,4 @@
-## CHALLENGE Agrosuper - Front End (ECOMMERCE)
+## CHALLENGE Agrosuper - Front End 
 
 <center><img src="./src/assets/img/logo-agrosuper-azul.jpg" width="40%" /></center>
 
