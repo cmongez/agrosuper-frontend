@@ -10,7 +10,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './index.scss';
 
 //Redux
-import store from './app/store';
+import { store } from './app/store';
 import { Provider } from 'react-redux';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

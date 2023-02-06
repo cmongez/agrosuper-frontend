@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from '../layout/Layout';
-import Login from '../components/Login';
+import Login from '../pages/Login';
 import General from '../pages/General';
 import Variaciones from '../pages/Variaciones';
 import Cerdo from '../pages/Cerdo';

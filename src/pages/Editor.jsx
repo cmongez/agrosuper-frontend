@@ -1,5 +1,6 @@
+import Construccion from './Construccion';
 const Editor = () => {
-  return <div className="col-9">Editor</div>;
+  return <Construccion />;
 };
 
 export default Editor;
