@@ -4,16 +4,16 @@ const authSlice = createSlice({
   name: 'auth',
   initialState: {
     user: 'devsafio',
-    pass: '',
+    pass: 'tokentokentokenABC',
     isLogin: localStorage.getItem('isLogin') ? JSON.parse(localStorage.getItem('isLogin')) : false,
   },
   reducers: {
     setLogin: (state) => {
-      !state.isLogin;
+      state.isLogin = true;
       localStorage.setItem('isLogin', JSON.stringify(state.isLogin));
     },
     setLogout: (state) => {
-      !state.isLogin;
+      state.isLogin = false;
       localStorage.setItem('isLogin', JSON.stringify(state.isLogin));
     },
   },

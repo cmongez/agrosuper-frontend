@@ -14,12 +14,10 @@ const GeneralFilters = () => {
   const dispatch = useDispatch();
   const handleAnio = (e) => {
     let { value } = e.target;
-    console.log(value);
     dispatch(setAnio(value));
   };
 
   const handleUsdCheck = (e) => {
-    // console.log('e->', e.target.value, 'USD', usd);
     if (e.target.value !== usd) {
       setUsdCheck(!usdCheck);
       dispatch(setUsd(e.target.value));

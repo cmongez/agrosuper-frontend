@@ -9,8 +9,6 @@ const options = {
 };
 
 export const getVariaciones = () => {
-  console.log('hola');
-
   return async (dispatch) => {
     try {
       const { data } = await agrosuperApi.post('/obtenerVariaciones', options);

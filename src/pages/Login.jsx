@@ -4,14 +4,39 @@ import logo_png from '../assets/img/logo-agrosuper-transparente.png';
 import Footer from '../layout/Footer';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { setLogin } from '../features/auth/authSlice';
 
 const Login = () => {
   const navigate = useNavigate();
 
-  const { user, pass } = useSelector((state) => state.auth);
+  const { user, pass, isLogin } = useSelector((state) => state.auth);
+
+  const [userForm, setUserForm] = useState();
+  const [passForm, setPassForm] = useState();
+  const [passWrong, setPassWrong] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (userForm === user && passForm === pass) {
+      dispatch(setLogin());
+      navigate('/general');
+      return;
+    }
+    setPassWrong(true);
+    return;
+  };
+
+  useEffect(() => {
+    if (isLogin) {
+      navigate('/general');
+    }
+  }, []);
 
   const sendToGeneral = () => {
-    navigate('/general');
+    //
   };
 
   return (
@@ -24,25 +49,36 @@ const Login = () => {
           </div>
           <div className="row justify-content-center align-items-center flex-column">
             <div className="col-10 col-md-6 text-center card shadow-lg ">
-              <form className="w-75 mx-auto pt-4">
+              <form onChange={() => setPassWrong(false)} onSubmit={handleSubmit} className="w-75 mx-auto pt-4">
                 <h1 className="text-agro-primary mb-4">Login</h1>
 
                 <div className="form-outline">
-                  <input type="text" id="user" className="form-control" placeholder="Usuario" />
-                  <label className="form-label" htmlFor="user"></label>
+                  <input
+                    onChange={({ target }) => setUserForm(target.value)}
+                    name="username"
+                    type="text"
+                    id="userfo"
+                    className="form-control"
+                    placeholder="Usuario"
+                  />
+                  <label className="form-label" htmlFor="userfo"></label>
                 </div>
 
                 <div className="form-outline">
-                  <input type="password" id="pass" className="form-control" placeholder="Contraseña" />
-                  <label className="form-label" htmlFor="pass"></label>
+                  <input
+                    name="password"
+                    onChange={({ target }) => setPassForm(target.value)}
+                    type="password"
+                    id="passfo"
+                    className="form-control"
+                    placeholder="Contraseña"
+                  />
+                  <label className="form-label" htmlFor="passfo"></label>
+                  {passWrong ? <span className="text-danger text-end">Datos incorrectos</span> : <></>}
                 </div>
 
                 <div className="text-center d-flex flex-column pt-1 mb-5 pb-1">
-                  <button
-                    onClick={() => sendToGeneral()}
-                    className="btn btn-primary text-white btn-block mb-3"
-                    type="button"
-                  >
+                  <button className="btn btn-primary text-white btn-block mb-3" type="submit">
                     Entrar
                   </button>
                   <a className="text-muted" href="#!">

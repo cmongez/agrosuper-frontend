@@ -1,4 +1,13 @@
- :root {
+@import url('https://fonts.cdnfonts.com/css/gotham');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Gotham", sans-serif;
+}
+
+:root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   min-height: 100vh;
   --color-agro-primary : #e87722;
@@ -8,11 +17,13 @@ $theme-colors: (
   primary: #e87722,
   secondary:#003087
 ) ;
-// @import url('https://fonts.cdnfonts.com/css/gotham');
-*, html, button, a, p{
-  font-family: 'verdana'
-}
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gotham", sans-serif;
+}
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 
