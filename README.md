@@ -6,9 +6,12 @@
 ## Consideraciones
 
 Este proyecto corresponde al challenge técnico de Agrosuper. 
+
 Datos para el login:
+
 usuario: devsafio
-password:tokentokentokenABC
+
+password: tokentokentokenABC
 
 ## Front End
 
