@@ -18,15 +18,13 @@ import {
 
 const GraphicsContainer = () => {
   const { real, proyectado, anio, usd } = useSelector((state) => state.general);
-
   //Valores Reales por Anio
   const ingresoRealPorAnio = useSelector(getIngresoRealPorAnio);
-  const costoRealPorAnio = useSelector(getIngresoRealPorAnio);
-  const resultadoRealPorAnio = useSelector(getIngresoRealPorAnio);
-  const gavRealPorAnio = useSelector(getIngresoRealPorAnio);
+  const costoRealPorAnio = useSelector(getCostoRealPorAnio);
+  const resultadoRealPorAnio = useSelector(getResultadoRealPorAnio);
+  const gavRealPorAnio = useSelector(getGavRealPorAnio);
 
   //Valores proyectados por Anio
-
   const ingresoProyectadoPorAnio = useSelector(getIngresoProyectadoPorAnio);
   const costoProyectadoPorAnio = useSelector(getCostoProyectadoPorAnio);
   const resultadoProyectadoPorAnio = useSelector(getResultadoProyectadoPorAnio);
