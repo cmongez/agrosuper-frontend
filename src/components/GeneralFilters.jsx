@@ -14,9 +14,10 @@ const GeneralFilters = () => {
   });
 
   const dispatch = useDispatch();
+
   const handleAnio = (e) => {
     let { value } = e.target;
-    dispatch(setAnio(value));
+    dispatch(setAnio(Number(value)));
   };
 
   const handleUsdCheck = (e) => {

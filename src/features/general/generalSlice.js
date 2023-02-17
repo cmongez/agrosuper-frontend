@@ -41,7 +41,7 @@ export const getIngresoRealPorAnio = (state) =>
 
 //Costo Real
 export const getCostoRealPorAnio = (state) =>
-  state.real
+  state.general.real
     .filter((item) => item.concepto === 'COSTO' && item.anio === state.general.anio)
     .map((item) => {
       return { x: item.mes, y: item[state.general.usd] };
@@ -49,7 +49,7 @@ export const getCostoRealPorAnio = (state) =>
 
 //Resultado Real
 export const getResultadoRealPorAnio = (state) =>
-  state.real
+  state.general.real
     .filter((item) => item.concepto === 'RESULTADO' && item.anio === state.general.anio)
     .map((item) => {
       return { x: item.mes, y: item[state.general.usd] };
@@ -57,7 +57,7 @@ export const getResultadoRealPorAnio = (state) =>
 
 //Gav Real
 export const getGavRealPorAnio = (state) =>
-  state.real
+  state.general.real
     .filter((item) => item.concepto === 'GAV' && item.anio === state.general.anio)
     .map((item) => {
       return { x: item.mes, y: item[state.general.usd] };
